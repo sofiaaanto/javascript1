@@ -76,13 +76,13 @@ for(let i=0;i<10;i++){
 
 
 let num=[4,23,44,12,56,21,3,14,18,8,5]
-
+let contP=0
 //Muestre la cantidad de numeros pares del array num
-function comprobarNumerosPares(lista) {
+function comprobarNumerosPares(num) {
     let pares = [];
-    for (let i = 0; i < lista.length; i++) {
-      if (lista[i] % 2 === 0) {
-        pares.push(lista[i]);
+    for (let i = 0; i < num.length; i++) {
+      if (num[i] % 2 === 0) {
+        pares.push(num[i]);
         contP++
       }
     }
@@ -93,19 +93,27 @@ function comprobarNumerosPares(lista) {
   let numerosPares = comprobarNumerosPares(num);
   console.log(numerosPares, contP); // Output: [2, 4, 6, 8, 10]
 
-/*while(i<= num.length){
-    let pares=[]
-    if(num[i] % 2 ===0){
-        pares.push(num[i]);
-    }
-    i++
 
-}
-let numpares = i(num);
-console.log(numpares);
-
-*/
 
 //Cree un programa que muestre la cantidad de pares e impares 
-//el arreglo num, utilizando una funcion que retorne si el numero 
+//del arreglo num, utilizando una funcion que retorne si el numero 
 //que esta en el arreglo es par o impar
+
+let i = 0;
+let y = 0;
+
+function contador(lista) {
+    for (let j = 0; j < lista.length; j++) {
+        if (lista[j] % 2 === 0) {
+            console.log("El número " + lista[j] + " es par");
+            i++;
+        } else {
+            console.log("El número " + lista[j] + " es impar");
+            y++;
+        }
+    }
+    console.log("La cantidad de números pares es: " + i);
+    console.log("La cantidad de números impares es: " + y);
+}
+
+contador(num);
